@@ -1,0 +1,52 @@
+package com.example.hp.zixun;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import android.view.KeyEvent;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+public class jidianchaxunActivity extends Activity {
+
+    WebView webView;
+    @SuppressLint("WrongViewCast")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.jidianchaxun_main);
+
+        webView= (WebView) findViewById(R.id.jidianchaxun);
+
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);//允许运行JavaScript
+
+        webView.loadUrl("http://202.121.66.80/");             //加载外网
+        webView.setWebViewClient(new HelloWebViewClient ());
+        //webView.loadUrl("file:///android_asset/XX.html");   //本地网站
+    }
+
+    @Override
+    //设置回退
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
+            webView.goBack(); //调用goBack()返回WebView的上一页面
+            return true;
+        }else{
+            System.exit(0); //退出程序
+        }
+        return super.onKeyDown(keyCode,event);
+    }
+
+    //Web视图
+    private class HelloWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
+    }
+}

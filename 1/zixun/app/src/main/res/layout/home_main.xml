@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hp.zixun.MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0.71"
+                android:background="@drawable/school2" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/background">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/technology"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/technology" />
+
+                    <ImageView
+                        android:id="@+id/news"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/news" />
+
+                    <ImageView
+                        android:id="@+id/college"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/college" />
+
+                    <ImageView
+                        android:id="@+id/teacher"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/teacher" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="学术讲座" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="校院新闻" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="学院动态" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="教师在线" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background"
+                android:orientation="vertical"
+                android:paddingBottom="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="20dp"
+                        android:background="#00BFFF" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="通知公告"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="更多&#187;"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/tzgg_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:divider="@null"></ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background"
+                android:orientation="vertical"
+                android:paddingBottom="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="20dp"
+                        android:background="#00BFFF" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="出访报告"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="更多&#187;"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <ListView
+                    android:id="@+id/cfbg_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:divider="@null"></ListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/under"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/shouye"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableTop="@drawable/shouye"
+                    android:text="首页" />
+
+                <Button
+                    android:id="@+id/library"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/library"
+                    android:onClick="onClick"
+                    android:text="数字图书馆" />
+
+                <Button
+                    android:id="@+id/jiaowuguanli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/jiaowuguanli"
+                    android:onClick="onClick"
+                    android:text="教务管理" />
+
+                <Button
+                    android:id="@+id/gerenzhongxin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/gerenzhongxin"
+                    android:onClick="onClick"
+                    android:text="个人中心" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hp.zixun.Activity.MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="173dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/school3" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/background">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/technology"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/yikatong" />
+
+                    <ImageView
+                        android:id="@+id/news"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/chengjichaxun" />
+
+                    <ImageView
+                        android:id="@+id/college"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/dianhuazixun" />
+
+                    <ImageView
+                        android:id="@+id/teacher"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@drawable/citiao" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="一卡通" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="成绩查询" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="办公电话" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="海大词条" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/background">
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/libraryweb"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:drawableTop="@drawable/libraryweb"
+                        android:text="图书馆网站" />
+                    <Button
+                        android:id="@+id/tzzhongwenshujuku"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:drawableTop="@drawable/dianzi"
+                        android:text="电子资源" />
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/tzzhongwenshujuku"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:drawableTop="@drawable/mobilelibrary"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:text="移动图书馆" />
+
+                    <Button
+                        android:id="@+id/selectbook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/selectbook"
+                        android:onClick="onClick"
+                        android:text="书目检索" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/newbook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/newbook"
+                        android:onClick="onClick"
+                        android:text="新书通告" />
+
+                    <Button
+                        android:id="@+id/mylibrary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:drawableTop="@drawable/mylibrary"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:text="我的图书馆" />
+                </LinearLayout>
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/under"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/shouye"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:drawableTop="@drawable/shouye"
+                    android:text="首页" />
+
+                <Button
+                    android:id="@+id/library"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/library"
+                    android:onClick="onClick"
+                    android:text="教务" />
+
+                <Button
+                    android:id="@+id/jiaowuguanli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/jiaowuguanli"
+                    android:onClick="onClick"
+                    android:text="教务管理" />
+
+                <Button
+                    android:id="@+id/gerenzhongxin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/gerenzhongxin"
+                    android:onClick="onClick"
+                    android:text="个人中心" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
